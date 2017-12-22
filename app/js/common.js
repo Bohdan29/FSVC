@@ -4,4 +4,12 @@ $('.search-btn').on('click', function(){
 })
 
 //slick slider
-$('.single-item').slick(); 
+$('.single-item').slick({
+	dots: true,
+	arrows: false
+}); 
+
+$('.multiple-items').slick({
+	slidesToShow: 8,
+  slidesToScroll: 8,
+});

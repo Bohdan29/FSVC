@@ -11,7 +11,7 @@ body
 .container 
 	max-width: 1225px
 	margin: 0 auto
-	overflow: hidden
+
 
 header
 	height: 100px
@@ -51,7 +51,7 @@ header
 	
 nav
 	height: 50px
-	background-color: #002d64
+	background-color: $def-color
 
 	.container
 		display: flex
@@ -95,7 +95,7 @@ nav
 				border: none
 				height: 25px
 				padding: 5px 15px
-				color: #002d64
+				color: $def-color
 
 		button.search-btn
 			background-color: transparent
@@ -109,10 +109,38 @@ nav
 			&:active
 				color: #b9cfea
 
+.single-item
+		margin-bottom: 0 !important
+		
+		.slick-dots
+			bottom: 45px
+			margin-left: -6px
+	
+			li
+				margin: 0 30px
+
+				button
+					&:before
+						font-family: FontAwesome !important
+						content: "\f1db" !important
+						color: #eaefe3 !important
+						font-size: 33px !important
+						opacity: 1 !important
+
+		li.slick-active
+				button
+					&:before 
+						font-size: 33px !important
+						font-family: FontAwesome !important
+						content: "\f192" !important
+						color: #eaefe3 !important
+						opacity: 1 !important
+	
+
 .main-slider
 	padding-top: 108px
 	padding-bottom: 153px
-	background-color: #002d64
+	background-color: $def-color
 	background-image: url("../img/bg-main-slider.png")
 	background-position: center top
 	background-size: cover
@@ -133,13 +161,19 @@ nav
 	button.become,
 	button.submit
 		background-color: #60f0b5
-		color: #002d64
+		color: $def-color
 		text-transform: uppercase
 		text-align: center
 		font-size: 16px
 		font-weight: 600
-		border: none
+		border: 1px solid transparent
 		border-radius: 5px
+
+		&:hover,
+		&:active
+			background-color: $def-color
+			color: #60f0b5
+			border: 1px solid #60f0b5
 	
 	button.become
 		margin-top: 91px
@@ -152,10 +186,6 @@ nav
 		font-size: 14px
 		font-weight: 600
 
-		&:hover,
-		&:active
-			background-color: #002d64
-			color: #60f0b5
 
 	form.mail
 		margin-top: 71px
@@ -175,9 +205,314 @@ nav
 			font-size: 16px
 			padding: 10px 12px 11px 12px
 
+
+
 .brand-slider
 	height: 100px
 	background-color: #cbe7ff
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
 
-.slick-prev
-	background-color: #000 !important
+	.brand-item
+		height: 100px 
+		text-align: center
+
+
+		img
+			margin: 0 auto
+			margin-top: 26px
+
+.about	
+	padding-top: 133px
+	padding-bottom: 56px
+	background-color: #f6f8fa
+	background-image: url("../img/bg-about.png")
+	background-position: left bottom
+	background-repeat: no-repeat
+
+	h2
+		font-size: 30px
+		font-weight: 500
+		color: $def-color
+		margin-bottom: 30px
+		letter-spacing: -.3px
+
+	p.about-p
+		font-size: 18px
+		font-weight: 400
+		color: #333
+		margin-bottom: 23px
+		letter-spacing: -.2px
+
+	hr
+		margin-top: 42px
+
+	.title-map
+		margin-top: 26px
+		margin-bottom: 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		h2
+			margin-bottom: 0
+			margin-left: -2px
+
+		.color-programs
+			display: flex
+			
+
+			.current-prog,
+			.past-prog
+				display: flex
+				align-items: center
+				background-color: #607ea1
+				padding: 4px
+				margin-left: 21px
+
+				p
+					color: #fff
+					font-size: 18.72px
+					font-weight: 500
+					padding: 0 12px 0 8px
+
+.expertise
+	background-color: $def-color
+	background-image: url("../img/bg-about.png")
+	background-position: left bottom
+	background-repeat: no-repeat
+	padding-top: 135px
+	padding-bottom: 58px
+
+	h2
+		color: #fff
+		font-weight: 500
+		font-size: 30px
+		margin-bottom: 36px
+		margin-top: -8px
+		letter-spacing: -.3px
+
+	p
+		color: #fff
+		font-size: 18px
+		margin-bottom: 65px
+		margin-top: -5px
+
+
+	.exp-list
+
+		ul
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			list-style: none
+			
+
+			li
+				background-color: #fff
+				background-image: url("../img/bg-exp-list.png")
+				background-repeat: no-repeat
+				background-position: center center
+				border-radius: 10px
+				width: 238px
+				height: 305px
+				display: flex
+				flex-direction: column
+				align-items: center
+				border: 1px solid #a1afc5
+				position: relative
+				margin-right: 87px
+				margin-bottom: 60px 
+
+				&:nth-child(4),
+				&:nth-child(7)
+					margin-right: 0
+
+				&:nth-child(5),
+				&:nth-child(6),
+				&:nth-child(7)
+					margin-bottom: 0
+
+				.item-cont
+					display: flex
+					flex-direction: column
+					align-items: center
+
+					p
+						color: $def-color
+						text-align: center
+						font-weight: 500
+						font-size: 14.98px
+						padding: 28px 30px 0px 30px
+
+					img
+						margin-top: -20px
+
+				img.logo-exp
+					padding-top: 25px
+					left: 10px
+					bottom: 8px
+					position: absolute
+					
+			li.exp-item-2
+				.item-cont
+
+					p
+						padding: 37px 33px 0px 33px
+
+					img
+						margin-top: -5px
+						margin-left: 3px
+
+			li.exp-item-3
+				.item-cont
+					p
+						padding: 43px 33px 0px 33px
+
+					img
+						margin-top: 22px
+						margin-left: 3px
+
+			li.exp-item-4
+				.item-cont
+					p
+						padding: 43px 33px 0px 33px
+
+					img
+						margin-top: 30px
+
+			li.exp-item-5
+				.item-cont
+					p
+						padding: 37px 33px 0px 33px
+
+					img
+						margin-top: 19px
+						margin-left: 38px
+
+			li.exp-item-6
+				.item-cont
+					p
+						padding: 37px 33px 0px 40px
+
+					img
+						margin-top: 2px
+						margin-left: 6px
+
+			li.exp-item-7
+				.item-cont
+					p
+						padding: 37px 26px 0px 34px
+
+					img
+						margin-top: 16px
+						margin-left: 8px
+
+footer
+	background-color: #245086
+
+	.container
+		display: flex
+		padding: 40px 0
+
+
+		.logo-col
+			margin-top: 4px
+			width: 50%
+			flex-direction: column
+			align-items: center
+
+			.soc-list
+				ul
+					display: flex
+					justify-content: center
+					align-items: center
+					list-style: none
+					margin-left: -265px
+
+					li
+						margin-right: 35px
+						margin-top: -1px
+
+						a
+							color: #fff
+							font-size: 15px
+			
+			.logo-footer
+				img
+					margin-top: 10px
+
+
+			.copyright
+				p
+					color: #fff
+					font-family: Roboto
+					font-weight: 400
+					font-size: 14px
+					margin-top: 12px
+					letter-spacing: -.2px
+		
+		.navbar-col
+			width: 50%
+			display: flex
+			justify-content: space-between
+			margin-top: 20px
+
+			.col-1,
+			.col-2,
+			.col-3
+				ul
+					list-style: none
+					border-right: 1px solid rgba(255,255,255, .22)
+					padding-right: 35px
+
+					li
+						a
+							text-decoration: none
+							color: #fff
+
+							&:hover
+								color: $def-color
+
+			.col-1
+				ul
+					margin-top: -2px
+					margin-left: -2px	
+					line-height: 22px
+					padding-right: 58px
+					li
+						a
+							font-size: 15px
+
+			.col-2
+				ul
+					margin-top: -1px
+					margin-left: 5px
+					line-height: 20px
+					padding-right: 66px
+					li
+
+						&:first-child
+							a
+								font-size: 15px !important
+								font-weight: 600
+						a
+							font-size: 12px !important
+
+			.col-3
+				ul
+					line-height: 21px
+					border: none
+					li
+						a
+							font-size: 15px
+
+							
+								
+			
+
+
