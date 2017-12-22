@@ -1,0 +1,183 @@
+$def-color: #002d64
+
+*
+	margin: 0
+	padding: 0
+
+body
+	position: relative
+	font-family: 'Ubuntu', sans-serif
+
+.container 
+	max-width: 1225px
+	margin: 0 auto
+	overflow: hidden
+
+header
+	height: 100px
+	box-shadow: inset 0px 4px 10px rgba(0,45,100, .76)
+
+	.header-container
+		height: 100px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		.logo-link
+			display: block
+			padding-top: 3px
+
+		.social
+			display: flex
+			align-items: center
+
+			.social-list
+				display: flex
+				list-style: none
+				justify-content: space-around
+
+				li
+					margin-right: 32px
+					font-size: 18px
+
+			button.lang	
+				background-color: #fff
+				border: 1px solid #c9d3de
+				padding: 9px 17px
+				border-radius: 3px
+				text-transform: uppercase
+				font-size: 14px
+				color: $def-color 
+	
+nav
+	height: 50px
+	background-color: #002d64
+
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 50px
+
+		ul.navbar
+			display: flex
+			list-style: none
+			margin-left: -2px
+
+			li
+				margin-right: 30px
+
+				a
+					display: block
+					color: #fefefe
+					text-align: center
+					text-transform: uppercase
+					text-decoration: none
+					font-size: 13px
+
+					&:after  
+						display: block
+						content: attr(title)
+						font-weight: bold
+						height: 0
+						overflow: hidden
+						visibility: hidden
+
+					&:hover,
+					&:active
+						font-weight: 500
+		
+		form.search-form
+			display: none
+
+			input
+				border-radius: 3px
+				border: none
+				height: 25px
+				padding: 5px 15px
+				color: #002d64
+
+		button.search-btn
+			background-color: transparent
+			color: #fefefe
+			border: none
+			font-size: 22px
+			margin-right: 6px
+			outline: none
+
+			&:hover,
+			&:active
+				color: #b9cfea
+
+.main-slider
+	padding-top: 108px
+	padding-bottom: 153px
+	background-color: #002d64
+	background-image: url("../img/bg-main-slider.png")
+	background-position: center top
+	background-size: cover
+	box-shadow: inset 0px 9px 50px rgba(0,0,0, .8)
+
+	.logo-sld
+		margin-left: -3px
+
+	h1
+		margin-top: 48px
+		margin-left: -2px
+		line-height: 1.2
+		font-size: 40px
+		color: #fff
+		font-weight: bold
+		text-shadow: 1px 5px 2px rgba(0,0,0, .6)
+
+	button.become,
+	button.submit
+		background-color: #60f0b5
+		color: #002d64
+		text-transform: uppercase
+		text-align: center
+		font-size: 16px
+		font-weight: 600
+		border: none
+		border-radius: 5px
+	
+	button.become
+		margin-top: 91px
+		width: 265px
+		height: 60px
+
+	button.submit
+		height: 40px
+		width: 125px
+		font-size: 14px
+		font-weight: 600
+
+		&:hover,
+		&:active
+			background-color: #002d64
+			color: #60f0b5
+
+	form.mail
+		margin-top: 71px
+
+		p.descr-form
+			text-transform: uppercase
+			color: #fff
+			font-size: 14px
+			font-weight: 500
+			margin-bottom: 10px
+
+		input
+			margin-right: 6px
+			width: 335px
+			border: 1px solid #b4c0ce
+			color: #999
+			font-size: 16px
+			padding: 10px 12px 11px 12px
+
+.brand-slider
+	height: 100px
+	background-color: #cbe7ff
+
+.slick-prev
+	background-color: #000 !important
